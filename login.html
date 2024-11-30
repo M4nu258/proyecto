@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles_login.css"> <!-- Ruta al archivo CSS -->
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="video-fondo">
+        <source src="img/imagen2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Contenedor del formulario -->
+    <div class="container">
+        <h1>Iniciar Sesión</h1>
+        
+        <!-- Mostrar error si existe -->
+        <?php if (isset($error)): ?>
+            <p class="error"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+        
+        <!-- Formulario de inicio de sesión -->
+        <form action="users_login.php" method="POST">
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button href="../blog.html">Iniciar Sesión</button>
+        </form>
+        
+        <!-- Enlace a registro -->
+        <p><a href="registro.html">Registrarse</a></p>
+    </div>
+</body>
+</html>

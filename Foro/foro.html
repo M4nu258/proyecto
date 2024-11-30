@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foro de Discusión</title>
+  <link rel="stylesheet" href="styles_foro.css">
+</head>
+<body>
+
+  <!-- Perfil de usuario -->
+  <div class="user-profile">
+    <p>Usuario: <strong>Juanito</strong></p>
+    <p>Puntos: 120</p>
+  </div>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar tema..." />
+  </div>
+
+  <!-- Lista de temas -->
+  <section class="forum-topics">
+    <h2>Temas del Foro</h2>
+    <ul id="topic-list" class="topic-list">
+      <li>
+        <strong>Título del Tema 1</strong>
+        <p>Descripción breve del tema.</p>
+
+        <!-- Botones de votación -->
+        <div class="vote-buttons">
+          <button class="upvote">👍 Me gusta</button>
+          <button class="downvote">👎 No me gusta</button>
+          <span class="votes">0 votos</span>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="comments">
+          <h4>Comentarios:</h4>
+          <div id="comments-list-1" class="comments-list"></div>
+          <form class="comment-form" data-topic-id="1">
+            <textarea class="comment-text" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Comentar</button>
+          </form>
+        </div>
+      </li>
+
+      <!-- Otro tema -->
+      <li>
+        <strong>Título del Tema 2</strong>
+        <p>Descripción breve del tema.</p>
+
+        <!-- Botones de votación -->
+        <div class="vote-buttons">
+          <button class="upvote">👍 Me gusta</button>
+          <button class="downvote">👎 No me gusta</button>
+          <span class="votes">0 votos</span>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="comments">
+          <h4>Comentarios:</h4>
+          <div id="comments-list-2" class="comments-list"></div>
+          <form class="comment-form" data-topic-id="2">
+            <textarea class="comment-text" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Comentar</button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <script src="scripts_foro.js"></script>
+</body>
+</html>

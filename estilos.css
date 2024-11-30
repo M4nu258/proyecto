@@ -1,0 +1,143 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('img/imagen1.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen mientras se hace scroll */
+    margin: 0;
+    padding-top: 1px; /* Para que el contenido no quede pegado al encabezado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white; /* El color del texto será blanco para que contraste con la imagen */
+}
+
+/* Estilo del encabezado */
+header {
+    font-family: 'Source Sans Pro, serif';
+    position: relative;
+    background: rgba(0, 0, 0, 0); /* Fondo semi-transparente para que se vea la imagen */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 1px;
+    font-size: 14px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Contenedor del formulario */
+.registro-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para ver la imagen detrás */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(180, 85, 178, 0.853);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Título */
+.registro-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas de los campos */
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+}
+
+/* Estilo de los inputs y selects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 3px 0;
+    border: 1px solid #000000ab;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: #c2a8c5;
+    color: #333;
+}
+
+/* Efecto cuando se enfoca un campo */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #d01ae8;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Estilo del botón de submit */
+input[type="submit"] {
+    background-color: #ae1ae8;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #7508c2;
+}
+
+/* Espaciado entre los campos */
+br {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Contenedor para Fecha de Nacimiento y Género */
+.dob-gender-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+/* Estilo individual de cada campo dentro del contenedor */
+.dob-container, .gender-container {
+    width: 48%; /* Da espacio para los dos campos lado a lado */
+}
+
+.dob-container input,
+.gender-container select {
+    width: 100%; /* Asegura que los campos se adapten al contenedor */
+}
+
+/* Estilo responsive */
+@media (max-width: 600px) {
+    .registro-container {
+        padding: 20px;
+    }
+
+    .registro-container h1 {
+        font-size: 24px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Peagle</title>
+    <link rel="stylesheet" href="styles_blog.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <!-- Barra Lateral Desplegable -->
+        <div id="sidebar" class="sidebar" style="z-index: 1000;">
+            <button class="closebtn" onclick="closeNav()">×</button>
+            <a href="Perfil/perfil.html">Mi Perfil</a>
+            <a href="Foro/foro.html">Foro</a>
+            <a href="Contacto/contacto.html">Contacto</a>
+            <a href="Politica/politica.html">Política de privacidad y términos de uso</a>
+            <a href="login.html">Cerrar sesión</a>
+        </div>
+    
+    <!-- Botón para abrir la barra lateral -->
+    <span style="font-size:30px; cursor:pointer" onclick="openNav()">☰</span>
+
+        <h1>Kawaii Peagle</h1>
+    </header>
+
+    <!-- Menú de navegación debajo de la portada -->
+    <nav>
+        <ul class="accordion">
+            <li>
+                <button class="accordion-button">Inicio</button>
+                <div class="accordion-content">
+                    <a href="#home">Entradas recientes</a>
+                </div>
+            </li>
+            <li>
+                <button class="accordion-button">Categorías</button>
+                <div class="accordion-content">
+                    <a href="#" class="category-link" data-category="todas">Todas</a>
+                    <a href="#" class="category-link" data-category="reseñas">Reseñas</a>
+                    <a href="#" class="category-link" data-category="personal">Personal</a>
+                    <a href="#" class="category-link" data-category="viajes">Viajes</a>
+                    <a href="#" class="category-link" data-category="gastronomia">Gastronomía</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Entradas -->
+        <section id="home" class="blog-posts">
+            <h2>Entradas recientes</h2>
+            <div id="post-container">
+                <!-- Aquí se cargarán las entradas -->
+            </div>
+        </section>
+
+        <!-- Formulario para Crear una Entrada -->
+        <section id="create-post" class="blog-publication" style="display: none;">
+            <h2> Nueva publicación</h2>
+            <form id="post-form">
+                <input type="text" id="post-title" placeholder="Título" required>
+                <textarea id="post-content" placeholder="Escribe tu contenido aquí..." rows="5" required></textarea>
+                
+                <!-- Categoría -->
+                <label for="post-category">Categoría:</label>
+                <select id="post-category" required>
+                    <option value="reseñas">Reseñas</option>
+                    <option value="personal">Personal</option>
+                    <option value="viajes">Viajes</option>
+                    <option value="gastronomia">Gastronomía</option>
+                </select>
+                
+                <!-- Herramientas de edición -->
+                <div class="editor-tools">
+                    <label for="font-color">Color del texto:</label>
+                    <input type="color" id="font-color">
+                    <label for="font-family">Fuente:</label>
+                    <select id="font-family">
+                        <option value="Arial">Arial</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                </div>
+                
+                <!-- Subir imagen -->
+                <label for="post-image">Adjuntar imagen:</label>
+                <input type="file" id="post-image" accept="image/*">
+                <div id="image-preview" style="margin: 10px 0;"></div> <!-- Contenedor para previsualizar imagen -->
+
+                <button type="button" id="publish-post">Publicar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Botón de publicación flotante -->
+    <button id="new-post-btn" class="new-post-btn">+</button>
+
+    <script src="blog.js"></script>
+</body>
+</html>

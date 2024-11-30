@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles_perfil.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Div de perfil -->
+        <div class="profile-info">
+            <div class="profile-header">
+                <img class="profile-img" id="profile-img" src="https://via.placeholder.com/150" alt="Foto de perfil">
+                <h1 class="profile-name" id="profile-name">Juan Pérez</h1>
+            </div>
+            <div class="profile-details">
+                <h2>Detalles del perfil</h2>
+                <ul>
+                    <li><strong>Nombre:</strong> Juan Pérez</li>
+                    <li><strong>Correo:</strong> juanperez@example.com</li>
+                    <li><strong>Biografía:</strong> Web developer passionate about coding and design.</li>
+                </ul>
+            </div>
+            <div class="back-button-container">
+                <a href="../blog.html" class="back-button">Volver al blog</a>
+            </div>
+        </div>
+
+        <!-- Div de formulario -->
+        <div class="profile-form">
+            <h2>Actualizar perfil</h2>
+            <form id="profile-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required>
+
+                <label for="bio">Biografía:</label>
+                <textarea id="bio" name="bio" placeholder="Escribe una breve biografía..." required></textarea>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Introduce tu correo electrónico" required>
+
+                <label for="profile_img">Foto de perfil:</label>
+                <input type="file" id="profile_img" name="profile_img" accept="image/*">
+
+                <button type="submit">Actualizar perfil</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script_perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Estilo general del body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video de fondo */
+#video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: rgba(0, 0, 0, 0.878); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgb(0, 0, 0);
+}
+
+/* Título */
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f1f1f1;
+    color: #333;
+}
+
+/* Botón de inicio de sesión */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #8e4493;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #6f3487;
+}
+
+/* Estilo para el enlace */
+p a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje de error */
+.error {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
